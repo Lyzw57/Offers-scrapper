@@ -11,3 +11,5 @@ URL = f'https://www.olx.pl/motoryzacja/samochody/?search%5Bfilter_float_price%3A
 page = get(URL)
 bs = BeautifulSoup(page.content)
 
+for offer in bs.find_all('div', class_='offer-wrapper'):
+    print(offer)
